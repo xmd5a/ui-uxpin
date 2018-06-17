@@ -8,7 +8,8 @@
     "dev": "gulp",
     "lint": "gulp lint-js && gulp lint-css",
     "start": "gulp",
-    "watch": "gulp"
+    "watch": "gulp",
+    "build-icons": "icon-font-generator ./src/assets/images/icons/*.svg -f ../assets/fonts/ -t a -o./src/assets/fonts"
   },
   "chisel": {
     "src": {
@@ -77,6 +78,7 @@
     "gulp-stylelint": "^3.9.0",
     "gulp-twig": "^v1.2.0",
     "gulp-uglify": "^3.0.0",
+    "icon-font-generator": "^2.1.7",
     "lodash": "^4.17.5",
     "multipipe": "^2.0.3",
     "pre-commit": "^1.2.2",
