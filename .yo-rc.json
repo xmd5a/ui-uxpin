@@ -1,0 +1,16 @@
+{
+  "generator-chisel": {
+    "config": {
+      "name": "frontend-ui-dev-recruitment-task",
+      "author": "Piotr Szarmach",
+      "projectType": "fe",
+      "nameSlug": "frontend-ui-dev-recruitment-task",
+      "nameCamel": "FrontendUiDevRecruitmentTask",
+      "chiselVersion": "0.13.2",
+      "has_jquery": false
+    },
+    "pages": [
+      "app"
+    ]
+  }
+}
