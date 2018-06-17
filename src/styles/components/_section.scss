@@ -1,0 +1,16 @@
+@import '../utilities/letter-spacing';
+
+.c-section {
+  border-bottom: 1px solid $colorWildSand;
+
+  &__headline {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 10px;
+    font-weight: 400;
+    @include letterSpacing(100);
+    text-transform: uppercase;
+    color: $colorScorpion
+  }
+}
