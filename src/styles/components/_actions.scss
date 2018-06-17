@@ -1,0 +1,10 @@
+.c-actions {
+  display: flex;
+  justify-content: center;
+  height: $actionsHeadlineHeight;
+  border-bottom: 1px solid $colorMercury;
+  padding: {
+    left: 0;
+    right: 0;
+  }
+}

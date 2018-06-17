@@ -1,0 +1,25 @@
+.c-icon-list {
+  display: flex;
+  align-self: center;
+
+  .c-icon {
+    color: $colorDoveGray
+  }
+
+  + .c-icon-list {
+    position: relative;
+    margin-left: 10px;
+    padding-left: 10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 1px;
+      height: 60%;
+      background: $colorConcrete;
+      transform: translateY(-50%);
+    }
+  }
+}

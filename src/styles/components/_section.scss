@@ -7,7 +7,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    height: 40px;
+    height: $actionsHeadlineHeight;
     font-size: 10px;
     font-weight: 400;
     @include letterSpacing(100);
