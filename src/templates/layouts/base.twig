@@ -24,20 +24,10 @@
   {% endblock %}
 </head>
 
-<body class="{{body_class}}">
-  {% block header %}
-    {% include 'components/header.twig' %}
-  {% endblock %}
-  
-
+<body>
   <main class="o-wrapper">
     {% block content %}
-      Sorry, no content
     {% endblock %}
   </main>
-
-  {% block footer %}
-    {% include 'components/footer.twig' %}
-  {% endblock %}
 </body>
 </html>
