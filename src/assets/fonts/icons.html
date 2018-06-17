@@ -28,7 +28,7 @@
             border-radius: 3px 3px 0 0;
         }
 
-        .preview .inner a {
+        .preview .inner i {
             line-height: 85px;
             font-size: 40px;
             color: #333;
@@ -54,18 +54,18 @@
 
         @font-face {
     font-family: "icons";
-    src: url("../assets/fonts/icons.eot?cab786428dc5a3a5d94254fcdeed3214?#iefix") format("embedded-opentype"),
-url("../assets/fonts/icons.woff2?cab786428dc5a3a5d94254fcdeed3214") format("woff2"),
-url("../assets/fonts/icons.woff?cab786428dc5a3a5d94254fcdeed3214") format("woff"),
-url("../assets/fonts/icons.ttf?cab786428dc5a3a5d94254fcdeed3214") format("truetype"),
-url("../assets/fonts/icons.svg?cab786428dc5a3a5d94254fcdeed3214#icons") format("svg");
+    src: url("../assets/fonts/icons.eot?15b019e417150a763fcd76deded3046f?#iefix") format("embedded-opentype"),
+url("../assets/fonts/icons.woff2?15b019e417150a763fcd76deded3046f") format("woff2"),
+url("../assets/fonts/icons.woff?15b019e417150a763fcd76deded3046f") format("woff"),
+url("../assets/fonts/icons.ttf?15b019e417150a763fcd76deded3046f") format("truetype"),
+url("../assets/fonts/icons.svg?15b019e417150a763fcd76deded3046f#icons") format("svg");
 }
 
-a {
+i {
     line-height: 1;
 }
 
-a[class^="icon-"]:before, a[class*=" icon-"]:before {
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
     font-family: icons !important;
     font-style: normal;
     font-weight: normal !important;
@@ -112,8 +112,11 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 .icon-radius-expand:before {
     content: "\f10c";
 }
-.icon-transform:before {
+.icon-swap:before {
     content: "\f10d";
+}
+.icon-transform:before {
+    content: "\f10e";
 }
 
 
@@ -126,7 +129,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-align-left"></a>
+                <i class="icon-align-left"></i>
             </span>
             <br>
             <span class='label'>align-left</span>
@@ -135,7 +138,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-align-right"></a>
+                <i class="icon-align-right"></i>
             </span>
             <br>
             <span class='label'>align-right</span>
@@ -144,7 +147,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-align-v-bottom"></a>
+                <i class="icon-align-v-bottom"></i>
             </span>
             <br>
             <span class='label'>align-v-bottom</span>
@@ -153,7 +156,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-align-v-center"></a>
+                <i class="icon-align-v-center"></i>
             </span>
             <br>
             <span class='label'>align-v-center</span>
@@ -162,7 +165,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-align-v-middle"></a>
+                <i class="icon-align-v-middle"></i>
             </span>
             <br>
             <span class='label'>align-v-middle</span>
@@ -171,7 +174,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-align-v-top"></a>
+                <i class="icon-align-v-top"></i>
             </span>
             <br>
             <span class='label'>align-v-top</span>
@@ -180,7 +183,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-collapse"></a>
+                <i class="icon-collapse"></i>
             </span>
             <br>
             <span class='label'>collapse</span>
@@ -189,7 +192,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-move-to-back"></a>
+                <i class="icon-move-to-back"></i>
             </span>
             <br>
             <span class='label'>move-to-back</span>
@@ -198,7 +201,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-move-to-front"></a>
+                <i class="icon-move-to-front"></i>
             </span>
             <br>
             <span class='label'>move-to-front</span>
@@ -207,7 +210,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-padding-expand"></a>
+                <i class="icon-padding-expand"></i>
             </span>
             <br>
             <span class='label'>padding-expand</span>
@@ -216,7 +219,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-plus"></a>
+                <i class="icon-plus"></i>
             </span>
             <br>
             <span class='label'>plus</span>
@@ -225,7 +228,7 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-radius-expand"></a>
+                <i class="icon-radius-expand"></i>
             </span>
             <br>
             <span class='label'>radius-expand</span>
@@ -234,7 +237,16 @@ a[class^="icon-"]:before, a[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <a class="icon-transform"></a>
+                <i class="icon-swap"></i>
+            </span>
+            <br>
+            <span class='label'>swap</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icon-transform"></i>
             </span>
             <br>
             <span class='label'>transform</span>

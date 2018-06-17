@@ -1,0 +1,9 @@
+.c-input-w-label {
+  display: inline-block;
+  margin-left: $marginBetweenInputs;
+
+  input {
+    width: 100%;
+    margin-left: 0;
+  }
+}

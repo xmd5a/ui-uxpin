@@ -4,61 +4,103 @@
 {% block content %}
 <div class="o-panel">
   <section class="o-section c-actions">
-    <ul class="c-icon-list">
-      <li>
-        <a class="c-icon c-icon--big icon-align-left">align left</a>
-      </li>
-      <li>
-        <a class="c-icon c-icon--big icon-align-v-center">align vertical center</a>
-      </li>
-      <li>
-        <a class="c-icon c-icon--big icon-align-right">align right</a>
-      </li>
-      <li>
-        <a class="c-icon c-icon--big icon-align-v-top">align top</a>
-      </li>
-      <li>
-        <a class="c-icon c-icon--big icon-align-v-middle">align middle</a>
-      </li>
-      <li>
-        <a class="c-icon c-icon--big icon-align-v-bottom">align bottom</a>
-      </li>
-    </ul>
-    <ul class="c-icon-list">
-      <li>
-        <a class="c-icon c-icon--big icon-move-to-front">To front</a>
-      </li>
-      <li>
-        <a class="c-icon c-icon--big icon-move-to-back">To back</a>
-      </li>
-    </ul>
+    {% include "components/icon-lists.twig" %}
+  </section>
+
+  <section class="o-section c-section c-section--space">
+    <div class="c-section__content">
+      <div class="c-section__content__row">
+        <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
+          <label>W</label>
+          <input type="text" value="500" />
+        </fieldset>
+        <fieldset class="c-section-content-icon">
+          <i class="c-icon icon-swap"></i>
+        </fieldset>
+        <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
+          <label>H</label>
+          <input type="text" value="500" />
+        </fieldset>
+        <i class="c-icon icon-transform"></i>
+      </div>
+
+      <div class="c-section__content__row">
+        <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
+          <label>X</label>
+          <input type="text" value="500" />
+        </fieldset>
+        <div class="u-spacing"></div>
+        <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
+          <label>Y</label>
+          <input type="text" value="500" />
+        </fieldset>
+      </div>
+
+      <div class="c-section__content__row">
+        <fieldset class="c-fieldset u-wide-width">
+          <label>Rotation</label>
+          <input type="text" value="0" />
+        </fieldset>
+      </div>
+    </div>
+  </section>
+
+  <section class="o-section c-section c-section--space">
+    <div class="c-section__content">
+      <div class="c-section__content__row">
+        <fieldset class="c-fieldset u-wide-width">
+          <label>Radius</label>
+          <input type="text" value="0" />
+        </fieldset>
+      </div>
+      <div class="c-section__content__row">
+        <fieldset class="c-fieldset u-wide-width">
+          <label>Padding</label>
+          <input type="text" value="0" />
+        </fieldset>
+      </div>
+      <div class="c-section__content__row">
+        <fieldset class="c-fieldset u-wide-width">
+          <label>Layer</label>
+          <div class="c-input-w-label u-95-width">
+            <input type="text" value="Normal" />
+          </div>
+          <div class="c-input-w-label u-40-width">
+            <input type="text" value="100%" />
+          </div>
+        </fieldset>
+      </div>
+    </div>
   </section>
 
   <section class="o-section c-section">
     <h2 class="c-section__headline">
       Fill
-      <a class="c-icon c-section__headline-icon icon-plus" href="#">expand fill</a>
+      <i class="c-icon c-section__headline-icon icon-plus">expand fill</i>
     </h2>
+    <div class="c-section__content">
+      test temporary content
+    </div>
   </section>
 
   <section class="o-section c-section">
     <h2 class="c-section__headline">
       Stroke
-      <a class="c-icon c-section__headline-icon icon-plus" href="#">expand stroke</a>
+      <i class="c-icon c-section__headline-icon icon-plus">expand stroke</i>
     </h2>
   </section>
 
   <section class="o-section c-section">
     <h2 class="c-section__headline">
       Shadow
-      <a class="c-icon c-section__headline-icon icon-plus" href="#">expand shadow</a>
+      <i class="c-icon c-section__headline-icon icon-plus">expand shadow</i>
     </h2>
   </section>
 
   <section class="o-section c-section">
     <h2 class="c-section__headline">
       Inner shadow
-      <a class="c-icon c-section__headline-icon icon-plus" href="#">expand inner shadow</a>
+      <i class="c-icon c-section__headline-icon icon-plus">expand inner shadow</i>
     </h2>
   </section>
 </div>

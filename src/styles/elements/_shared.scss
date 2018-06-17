@@ -1,5 +1,7 @@
 html, body {
   font-family: $openSansFont;
+  font-size: $globalFontSize;
+  color: $colorGray;
   min-height: 100%;
   height: 100%;
 }

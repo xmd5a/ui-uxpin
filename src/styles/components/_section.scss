@@ -22,4 +22,22 @@
   &__headline-icon {
     margin-left: auto;
   }
+
+  &__content {
+    padding-bottom: $sectionContentPadding;
+
+    &__row {
+      display: flex;
+    }
+
+    div + div {
+      margin-top: 10px;
+    }
+  }
+
+  &--space {
+    padding: {
+      top: $sectionContentPadding;
+    }
+  }
 }

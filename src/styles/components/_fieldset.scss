@@ -1,0 +1,21 @@
+.c-fieldset {
+  label {
+    display: inline-block;
+    width: 70px;
+  }
+
+  input {
+    width: 30px;
+    margin-left: $marginBetweenInputs;
+  }
+
+  &--smaller-label {
+    label {
+      font-size: 10px;
+      width: 10px;
+    }
+    input {
+      width: calc(100% - 20px);
+    }
+  }
+}

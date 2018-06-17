@@ -9,7 +9,7 @@
     "lint": "gulp lint-js && gulp lint-css",
     "start": "gulp",
     "watch": "gulp",
-    "build-icons": "icon-font-generator ./src/assets/images/icons/*.svg -f ../assets/fonts/ -t a -o./src/assets/fonts"
+    "build-icons": "icon-font-generator ./src/assets/images/icons/*.svg -f ../assets/fonts/ -o./src/assets/fonts"
   },
   "chisel": {
     "src": {

@@ -1,0 +1,12 @@
+input {
+  height: 22px;
+  font-size: $globalFontSize;
+  color: $inputColor;
+  border: none;
+  border-bottom: 1px solid $colorMercury;
+
+  &:focus {
+    border-bottom-color: $colorBlueRibbon;
+    outline: none;
+  }
+}
