@@ -1,23 +1,30 @@
 .c-fieldset {
-  margin-left: 0;
+  margin-left: $marginBetweenInputs;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
 
   label {
-    display: inline-block;
     width: 70px;
   }
 
   input {
     width: 30px;
-    margin-left: $marginBetweenInputs;
   }
 
   &--smaller-label {
     label {
       font-size: 10px;
-      width: 10px;
+      width: 12px;
     }
     input {
-      width: calc(100% - 20px);
+      width: 60px;
     }
   }
 
@@ -27,7 +34,9 @@
     }
   }
 
-  + fieldset {
-    margin-left: 8px;
+  &--label-without-input {
+    span {
+      margin-top: 3px;
+    }
   }
 }

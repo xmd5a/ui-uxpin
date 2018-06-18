@@ -1,4 +1,5 @@
 {% extends "layouts/base.twig" %}
+{% import "components/forms.twig" as forms %}
 {% set pageName = 'app' %}
 
 {% block content %}
@@ -8,107 +9,115 @@
   </section>
 
   <section class="o-section c-section c-section--space">
-    <div class="c-section__content">
+    <div class="c-section__content active">
       <div class="c-section__content__row">
-        <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
-          <label>W</label>
-          <input type="text" value="500" />
+        {{ forms.inputSmallLabel("width", "width", "W", 500) }}
+        <fieldset class="c-fieldset">
+          <i class="c-icon c-icon--regular icon-swap"></i>
         </fieldset>
-        <fieldset class="c-section-content-icon">
-          <i class="c-icon icon-swap"></i>
-        </fieldset>
-        <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
-          <label>H</label>
-          <input type="text" value="500" />
-        </fieldset>
+        {{ forms.inputSmallLabel("height", "height", "H", 500) }}
         <i class="c-icon icon-transform"></i>
       </div>
 
       <div class="c-section__content__row">
-        <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
-          <label>X</label>
-          <input type="text" value="500" />
-        </fieldset>
+        {{ forms.inputSmallLabel("position_x", "position_x", "X", 0) }}
         <div class="u-spacing"></div>
-        <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
-          <label>Y</label>
-          <input type="text" value="500" />
-        </fieldset>
-        <fieldset class="c-fieldset c-fieldset--checkbox">
-          <div class="c-checkbox">
-            <input type="checkbox" id="fill" />
-            <label for="fill">Sticky</label>
-          </div>
-        </fieldset>
+        {{ forms.inputSmallLabel("position_y", "positionY", "Y", 0) }}
+        {{ forms.checkbox("sticky", "sticky", "Sticky") }}
       </div>
 
       <div class="c-section__content__row">
-        <fieldset class="c-fieldset u-wide-width">
-          <label>Rotation</label>
-          <input type="text" value="0" />
-        </fieldset>
+        {{ forms.inputWideLabel("rotation", "rotation", "Rotation", 0) }}
       </div>
     </div>
   </section>
 
   <section class="o-section c-section c-section--space">
-    <div class="c-section__content">
+    <div class="c-section__content active">
       <div class="c-section__content__row">
-        <fieldset class="c-fieldset u-wide-width">
-          <label>Radius</label>
-          <input type="text" value="0" />
-        </fieldset>
+        {{ forms.inputWideLabel("radius", "radius", "Radius", 0) }}
       </div>
       <div class="c-section__content__row">
-        <fieldset class="c-fieldset u-wide-width">
-          <label>Padding</label>
-          <input type="text" value="0" />
-        </fieldset>
+        {{ forms.inputWideLabel("padding", "padding", "Padding", 0) }}
       </div>
       <div class="c-section__content__row">
-        <fieldset class="c-fieldset u-wide-width">
-          <label>Layer</label>
-          <div class="c-input-w-label u-95-width">
-            <input type="text" value="Normal" />
-          </div>
-          <div class="c-input-w-label u-40-width">
-            <input type="text" value="100%" />
-          </div>
-        </fieldset>
+        {{ forms.labelWithoutInput("Layer") }}
+        {{ forms.inputWithBottomLabel("blending", "blending", "Blending", "Normal", "select", "u-94-width") }}
+        {{ forms.inputWithBottomLabel("opacity", "opacity", "Opacity", "40%", "text", "u-40-width") }}
       </div>
     </div>
   </section>
 
   <section class="o-section c-section">
-    <h2 class="c-section__headline">
+    <h2 class="c-section__headline" data-section="fill">
       Fill
       <i class="c-icon c-section__headline-icon icon-plus">expand fill</i>
     </h2>
-    <div class="c-section__content">
+    <div class="c-section__content" data-section="fill">
       <div class="c-section__content__row">
+        {{ forms.checkboxAlignTop("fill", "fill", "", "checked") }}
+        {{ forms.colorBox("pink") }}
+        {{ forms.inputWithoutLabel("fill_color", "fill_color", "23F071", "hex") }}
+        {{ forms.inputWithoutLabel("fill_opacity", "fill_opacity", "100%", "", "u-40-width") }}
+      </div>
+      <div class="c-section__content__row">
+        {{ forms.checkboxAlignTop("fill_2", "fill_2", "", "checked") }}
+        {{ forms.colorBoxWithLabel("gradient", "Gradient") }}
       </div>
     </div>
   </section>
 
   <section class="o-section c-section">
-    <h2 class="c-section__headline">
+    <h2 class="c-section__headline" data-section="stroke">
       Stroke
       <i class="c-icon c-section__headline-icon icon-plus">expand stroke</i>
     </h2>
+    <div class="c-section__content" data-section="stroke">
+      <div class="c-section__content__row">
+        {{ forms.checkboxAlignTop("stroke", "stroke", "", "checked") }}
+        {{ forms.colorBox("pink") }}
+        {{ forms.inputWithoutLabel("stroke_color", "fill_color", "23F071", "hex") }}
+        {{ forms.inputWithoutLabel("stroke_line", "stroke_line", "lajn", "stroke-select") }}
+        {{ forms.inputWithoutLabel("stroke_border", "stroke_border", "1", "", "u-40-width") }}
+      </div>
+    </div>
   </section>
 
   <section class="o-section c-section">
-    <h2 class="c-section__headline">
+    <h2 class="c-section__headline" data-section="shadow">
       Shadow
       <i class="c-icon c-section__headline-icon icon-plus">expand shadow</i>
     </h2>
+    <div class="c-section__content" data-section="shadow">
+      <div class="c-section__content__row">
+        {{ forms.checkboxAlignTop("shadow", "shadow", "", "checked") }}
+        {{ forms.colorBox("transparent") }}
+        {{ forms.inputWithBottomLabel("shadow_opacity", "shadow_opacity", "Opacity", "40%", "text", "u-34-width") }}
+        {{ forms.inputWithBottomLabel("shadow_x", "shadow_x", "X", 0, "text", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("shadow_y", "shadow_y", "Y", 0, "text", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("shadow_blur", "shadow_blur", "Blur", 0, "text", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("shadow_spread", "shadow_spread", "Spread", 0, "text", "u-26-width") }}
+      </div>
+    </div>
   </section>
 
   <section class="o-section c-section">
-    <h2 class="c-section__headline">
+    <h2 class="c-section__headline" data-section="inner-shadow">
       Inner shadow
       <i class="c-icon c-section__headline-icon icon-plus">expand inner shadow</i>
     </h2>
+    <div class="c-section__content" data-section="inner-shadow">
+      <div class="c-section__content__row">
+        {{ forms.checkboxAlignTop("inner_shadow", "inner_shadow", "", "checked") }}
+        {{ forms.colorBox("transparent") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_opacity", "inner_shadow_opacity", "Opacity", "40%", "text",
+        "u-34-width") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_x", "inner_shadow_x", "X", 0, "text", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_y", "inner_shadow_y", "Y", 0, "text", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_blur", "inner_shadow_blur", "Blur", 0, "text", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_spread", "inner_shadow_spread", "Spread", 0, "text", "u-26-width") }}
+      </div>
+    </div>
   </section>
 </div>
 {% endblock %}

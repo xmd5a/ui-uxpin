@@ -1,0 +1,17 @@
+.c-input-hex {
+  position: relative;
+  width: 62px;
+
+  input {
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  &:before {
+    content: '#';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    color: $colorNobel;
+  }
+}

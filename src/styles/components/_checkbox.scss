@@ -1,7 +1,7 @@
 .c-checkbox {
-  cursor: pointer;
   position: relative;
   padding-left: 18px;
+  min-height: $checkboxHeight;
   top: 50%;
   transform: translateY(-50%);
 
@@ -25,6 +25,7 @@
   }
 
   label {
+    cursor: pointer;
     color: $colorScorpion;
 
     &:before {
@@ -53,5 +54,10 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
+  }
+
+  &--align-top {
+    top: 2px;
+    transform: none;
   }
 }

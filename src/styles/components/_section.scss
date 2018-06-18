@@ -24,13 +24,18 @@
   }
 
   &__content {
+    display: none;
     padding-bottom: $sectionContentPadding;
+
+    &.active {
+      display: block;
+    }
 
     &__row {
       display: flex;
     }
 
-    div + div {
+    > div + div {
       margin-top: 10px;
     }
   }

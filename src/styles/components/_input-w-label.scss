@@ -2,8 +2,20 @@
   display: inline-block;
   margin-left: $marginBetweenInputs;
 
+  &:first-of-type {
+    margin-left: 0;
+  }
+
   input {
     width: 100%;
     margin-left: 0;
+  }
+
+  label {
+    display: block;
+    color: $colorNobel;
+    font-size: 10px;
+    margin-top: 4px;
+    width: 100%;
   }
 }

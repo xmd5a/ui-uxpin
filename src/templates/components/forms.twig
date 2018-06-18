@@ -1,0 +1,104 @@
+{% macro label(id, label) %}
+  <label for="{{ id }}">{{ label }}</label>
+{% endmacro %}
+
+{% macro input(name, id, value, type, size) %}
+  {% if type == "hex" %}
+    <div class="c-input-hex">
+      <input name="{{ name }}" id={{ id }} type="{{ type|default("text") }}" value="{{ value }}" />
+    </div>
+  {% else %}
+    <input name="{{ name }}" id={{ id }} {% if size != "" %} class="{{ size }}" {% endif %} type="{{ type|default("text")
+    }}" value="{{ value }}" />
+  {% endif %}
+{% endmacro %}
+
+{% macro inputWithoutLabel(name, id, value, type, size) %}
+  {% import _self as forms %}
+
+  <fieldset class="c-fieldset {{ size }}">
+    <div class="c-fieldset__content {{ size }}">
+      {{ forms.input(name, id, value, type, size) }}
+    </div>
+  </fieldset>
+{% endmacro %}
+
+{% macro inputSmallLabel(name, id, label, value, type) %}
+  {% import _self as forms %}
+
+  <fieldset class="c-fieldset c-fieldset--smaller-label u-normal-width">
+    <div class="c-fieldset__content">
+      {{ forms.label(id, label) }}
+      {{ forms.input(name, id, value, type) }}
+    </div>
+  </fieldset>
+{% endmacro %}
+
+{% macro inputWideLabel(name, id, label, value, type) %}
+  {% import _self as forms %}
+
+  <fieldset class="c-fieldset u-wide-width">
+    <div class="c-fieldset__content">
+      {{ forms.label(id, label) }}
+      {{ forms.input(name, id, value, type) }}
+    </div>
+  </fieldset>
+{% endmacro %}
+
+{% macro inputWithBottomLabel(name, id, label, value, type, size) %}
+  {% import _self as forms %}
+
+  <fieldset class="c-fieldset {{ size }}">
+    <div class="c-input-w-label">
+      {{ forms.input(name, id, value, type) }}
+      {{ forms.label(id, label) }}
+    </div>
+  </fieldset>
+{% endmacro %}
+
+{% macro checkbox(name, id, label, checked) %}
+  {% import _self as forms %}
+
+  <fieldset class="c-fieldset c-fieldset--checkbox">
+    <div class="c-fieldset__content c-checkbox">
+      <input name={{ name }} id="{{ id }}" type="checkbox" {{ checked }} />
+      {{ forms.label(id, label) }}
+    </div>
+  </fieldset>
+{% endmacro %}
+
+{% macro checkboxAlignTop(name, id, label, checked) %}
+  {% import _self as forms %}
+
+  <fieldset class="c-fieldset c-fieldset--checkbox">
+    <div class="c-fieldset__content c-checkbox c-checkbox--align-top">
+      <input name={{ name }} id="{{ id }}" type="checkbox" {{ checked }} />
+      {{ forms.label(id, label) }}
+    </div>
+  </fieldset>
+{% endmacro %}
+
+{% macro labelWithoutInput(label) %}
+  <div class="c-fieldset c-fieldset--label-without-input u-62-width">
+    <div class="c-fieldset__content">
+      <span class="without-input">{{ label }}</span>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro colorBox(color) %}
+  <div class="c-fieldset">
+    <div class="c-fieldset__content">
+      <div class="c-color-box c-color-box--color-{{ color }}"></div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro colorBoxWithLabel(color, label) %}
+  <div class="c-fieldset c-fieldset--colorbox">
+    <div class="c-fieldset__content">
+      <div class="c-color-box c-color-box--color-{{ color }}"></div>
+      <label class="c-color-box__label">{{ label }}</label>
+    </div>
+  </div>
+{% endmacro %}

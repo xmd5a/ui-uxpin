@@ -1,0 +1,44 @@
+.c-color-box {
+  position: relative;
+  box-sizing: border-box;
+  width: $colorboxSize;
+  height: $colorboxSize;
+  border-radius: 2px;
+  background: $colorWhite;
+
+  &--color-pink {
+    background: $colorRose;
+  }
+
+  &--color-transparent {
+    &:before,
+    &:after {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $colorboxSize;
+      height: $colorboxSize;
+      border-radius: 2px;
+    }
+
+    &:before {
+      z-index: 2;
+      border: 1px solid rgba(0,0,0,0.2);
+      background: rgba($colorBlack, 0.4);
+    }
+
+    &:after {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAJElEQVQYV2O8d/fufwYkoKSszIjMZ6SDAmT7QGx0K1EcRBsFAMKWHmVc/WmMAAAAAElFTkSuQmCC)
+    }
+  }
+
+  &--color-gradient {
+    background: linear-gradient(to right, #FF006C, #D607CE);
+  }
+
+  &__label {
+    margin-left: $marginBetweenInputs;
+  }
+}
