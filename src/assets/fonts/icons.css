@@ -1,10 +1,10 @@
 @font-face {
     font-family: "icons";
-    src: url("../assets/fonts/icons.eot?a0aae6e4d748d5fb694921e7921f51bf?#iefix") format("embedded-opentype"),
-url("../assets/fonts/icons.woff2?a0aae6e4d748d5fb694921e7921f51bf") format("woff2"),
-url("../assets/fonts/icons.woff?a0aae6e4d748d5fb694921e7921f51bf") format("woff"),
-url("../assets/fonts/icons.ttf?a0aae6e4d748d5fb694921e7921f51bf") format("truetype"),
-url("../assets/fonts/icons.svg?a0aae6e4d748d5fb694921e7921f51bf#icons") format("svg");
+    src: url("../assets/fonts/icons.eot?48ccc159b2e32aa9bfb460e6d1edb898?#iefix") format("embedded-opentype"),
+url("../assets/fonts/icons.woff2?48ccc159b2e32aa9bfb460e6d1edb898") format("woff2"),
+url("../assets/fonts/icons.woff?48ccc159b2e32aa9bfb460e6d1edb898") format("woff"),
+url("../assets/fonts/icons.ttf?48ccc159b2e32aa9bfb460e6d1edb898") format("truetype"),
+url("../assets/fonts/icons.svg?48ccc159b2e32aa9bfb460e6d1edb898#icons") format("svg");
 }
 
 i {
@@ -61,6 +61,9 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-swap:before {
     content: "\f10d";
 }
-.icon-transform:before {
+.icon-ticker:before {
     content: "\f10e";
+}
+.icon-transform:before {
+    content: "\f10f";
 }

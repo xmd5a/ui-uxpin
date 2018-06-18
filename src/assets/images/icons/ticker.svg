@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="ticker" class="cls-1" d="M5.829.191a.517.517,0,0,0-.8,0L2.218,3.424.964,1.98a.517.517,0,0,0-.8,0,.724.724,0,0,0,0,.924L1.817,4.809a.517.517,0,0,0,.8,0L5.829,1.115a.725.725,0,0,0,0-.924Z" transform="translate(0.005)"/>
+</svg>
