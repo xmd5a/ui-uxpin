@@ -45,6 +45,17 @@
   </fieldset>
 {% endmacro %}
 
+{% macro inputLabel(name, id, label, value, type) %}
+  {% import _self as forms %}
+
+  <fieldset class="c-fieldset">
+    <div class="c-fieldset__content">
+      {{ forms.label(id, label) }}
+      {{ forms.input(name, id, value, type) }}
+    </div>
+  </fieldset>
+{% endmacro %}
+
 {% macro inputWithBottomLabel(name, id, label, value, type, size) %}
   {% import _self as forms %}
 

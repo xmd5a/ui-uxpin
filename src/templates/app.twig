@@ -3,7 +3,7 @@
 {% set pageName = 'app' %}
 
 {% block content %}
-<div class="o-panel">
+<main class="o-panel">
   <section class="o-section c-actions">
     {% include "components/icon-lists.twig" %}
   </section>
@@ -11,34 +11,60 @@
   <section class="o-section c-section c-section--space">
     <div class="c-section__content active">
       <div class="c-section__content__row">
-        {{ forms.inputSmallLabel("width", "width", "W", 500) }}
+        {{ forms.inputSmallLabel("width", "width", "W", 500, "number") }}
         <i class="c-icon c-icon--inline c-icon--regular c-icon--no-hover icon-swap"></i>
-        {{ forms.inputSmallLabel("height", "height", "H", 500) }}
+        {{ forms.inputSmallLabel("height", "height", "H", 500, "number") }}
         <div class="c-fieldset">
-          <i class="c-icon icon-transform c-icon--no-hover"></i>
+          <i class="c-icon icon-transform c-icon--inline c-icon--no-hover"></i>
         </div>
       </div>
 
       <div class="c-section__content__row">
-        {{ forms.inputSmallLabel("position_x", "position_x", "X", 0) }}
+        {{ forms.inputSmallLabel("position_x", "position_x", "X", 0, "number") }}
         <div class="u-spacing"></div>
-        {{ forms.inputSmallLabel("position_y", "positionY", "Y", 0) }}
+        {{ forms.inputSmallLabel("position_y", "positionY", "Y", 0, "number") }}
         {{ forms.checkbox("sticky", "sticky", "Sticky") }}
       </div>
 
       <div class="c-section__content__row">
-        {{ forms.inputWideLabel("rotation", "rotation", "Rotation", 0) }}
+        {{ forms.inputWideLabel("rotation", "rotation", "Rotation", 0, "number") }}
       </div>
     </div>
   </section>
 
   <section class="o-section c-section c-section--space">
     <div class="c-section__content active">
-      <div class="c-section__content__row">
-        {{ forms.inputWideLabel("radius", "radius", "Radius", 0) }}
+      <div class="c-section__content__row" data-section="radius-short">
+        {{ forms.inputLabel("radius", "radius", "Radius", 0, "number") }}
+        <div class="c-fieldset">
+          <i class="c-icon icon-radius-expand c-icon--bordered" data-hide="radius-short" data-show="radius-full"></i>
+        </div>
+      </div>
+      <div class="c-section__content__row" data-section="radius-full">
+        {{ forms.labelWithoutInput("Radius") }}
+        {{ forms.inputWithBottomLabel("radius_tl", "radius_tl", "TL", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("radius_tr", "radius_tr", "TR", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("radius_br", "radius_br", "BR", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("radius_bl", "radius_bl", "BL", 2, "number", "u-26-width") }}
+        <div class="c-fieldset">
+          <i class="c-icon icon-collapse c-icon--bordered" data-hide="radius-full" data-show="radius-short"></i>
+        </div>
       </div>
       <div class="c-section__content__row">
-        {{ forms.inputWideLabel("padding", "padding", "Padding", 0) }}
+        {{ forms.inputLabel("padding", "padding", "Padding", 2, "number") }}
+        <div class="c-fieldset">
+          <i class="c-icon icon-padding-expand c-icon--bordered"></i>
+        </div>
+      </div>
+      <div class="c-section__content__row">
+        {{ forms.labelWithoutInput("Radius") }}
+        {{ forms.inputWithBottomLabel("padding_left", "padding_left", "TL", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("padding_top", "padding_top", "TR", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("padding_right", "padding_right", "BR", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("padding_bottom", "padding_bottom", "BL", 2, "number", "u-26-width") }}
+        <div class="c-fieldset">
+          <i class="c-icon icon-collapse c-icon--bordered"></i>
+        </div>
       </div>
       <div class="c-section__content__row">
         {{ forms.labelWithoutInput("Layer") }}
@@ -58,7 +84,7 @@
         {{ forms.checkboxAlignTop("fill", "fill", "", "checked") }}
         {{ forms.colorBox("pink") }}
         {{ forms.inputWithoutLabel("fill_color", "fill_color", "23F071", "hex") }}
-        {{ forms.inputWithoutLabel("fill_opacity", "fill_opacity", "100%", "", "u-40-width") }}
+        {{ forms.inputWithoutLabel("fill_opacity", "fill_opacity", "100%", "text", "u-40-width") }}
       </div>
       <div class="c-section__content__row">
         {{ forms.checkboxAlignTop("fill_2", "fill_2", "", "checked") }}
@@ -72,7 +98,7 @@
       Stroke
       <i class="c-icon c-section__headline-icon icon-plus">expand stroke</i>
     </h2>
-    <div class="c-section__content active" data-section="stroke">
+    <div class="c-section__content" data-section="stroke">
       <div class="c-section__content__row">
         {{ forms.checkboxAlignTop("stroke", "stroke", "", "checked") }}
         {{ forms.colorBox("pink") }}
@@ -85,7 +111,7 @@
           <option>one</option>
           <option>one</option>
         </select>
-        {{ forms.inputWithoutLabel("stroke_border", "stroke_border", "1", "", "u-40-width") }}
+        {{ forms.inputWithoutLabel("stroke_border", "stroke_border", "1", "number", "u-40-width") }}
       </div>
     </div>
   </section>
@@ -100,10 +126,10 @@
         {{ forms.checkboxAlignTop("shadow", "shadow", "", "checked") }}
         {{ forms.colorBox("transparent") }}
         {{ forms.inputWithBottomLabel("shadow_opacity", "shadow_opacity", "Opacity", "40%", "text", "u-34-width") }}
-        {{ forms.inputWithBottomLabel("shadow_x", "shadow_x", "X", 0, "text", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("shadow_y", "shadow_y", "Y", 0, "text", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("shadow_blur", "shadow_blur", "Blur", 0, "text", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("shadow_spread", "shadow_spread", "Spread", 0, "text", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("shadow_x", "shadow_x", "X", 0, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("shadow_y", "shadow_y", "Y", 0, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("shadow_blur", "shadow_blur", "Blur", 0, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("shadow_spread", "shadow_spread", "Spread", 0, "number", "u-26-width") }}
       </div>
     </div>
   </section>
@@ -119,14 +145,14 @@
         {{ forms.colorBox("transparent") }}
         {{ forms.inputWithBottomLabel("inner_shadow_opacity", "inner_shadow_opacity", "Opacity", "40%", "text",
         "u-34-width") }}
-        {{ forms.inputWithBottomLabel("inner_shadow_x", "inner_shadow_x", "X", 0, "text", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("inner_shadow_y", "inner_shadow_y", "Y", 0, "text", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("inner_shadow_blur", "inner_shadow_blur", "Blur", 0, "text", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("inner_shadow_spread", "inner_shadow_spread", "Spread", 0, "text", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_x", "inner_shadow_x", "X", 0, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_y", "inner_shadow_y", "Y", 0, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_blur", "inner_shadow_blur", "Blur", 0, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("inner_shadow_spread", "inner_shadow_spread", "Spread", 0, "number", "u-26-width") }}
       </div>
     </div>
   </section>
-</div>
+</main>
 {% endblock %}
 
 

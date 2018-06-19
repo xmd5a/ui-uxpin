@@ -2,8 +2,8 @@
   cursor: pointer;
   position: relative;
   display: block;
-  width: 12px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   font-size: 10px;
   color: $colorSilverChalice;
   text-indent: -9999px;
@@ -32,10 +32,26 @@
   }
 
   &--inline {
-    margin-top: 2px;
+    margin-top: 4px;
 
     + fieldset {
       margin-left: 5px;
+    }
+  }
+
+  &--bordered {
+    margin-top: 2px;
+    box-sizing: border-box;
+    font-size: 9px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $colorMercury;
+    border-radius: 2px;
+
+    &:before {
+      top: 4px;
+      left: 4px;
+      transform: none;
     }
   }
 

@@ -3,8 +3,8 @@
   Author: Piotr Szarmach
  */
 
-import togglePanel from './modules/toggle';
+import TogglePanel from './modules/TogglePanel';
 
 document.querySelectorAll('.c-section__headline').forEach(el => {
-  el.addEventListener('click', togglePanel);
+  el.addEventListener('click', TogglePanel);
 });

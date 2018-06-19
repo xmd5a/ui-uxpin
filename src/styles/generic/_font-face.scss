@@ -75,8 +75,11 @@
 }
 
 .icon-plus:before {
+  font-size: 8px;
   content: '\e90a';
   color: #a6a6a6;
+  width: 6px;
+  height: 7px;
 }
 
 .icon-radius-expand:before {
@@ -95,7 +98,6 @@
 }
 
 .icon-transform:before {
-  margin-top: 4px;
   font-size: 17px;
   content: '\e90e';
   color: #d9d9d9;
