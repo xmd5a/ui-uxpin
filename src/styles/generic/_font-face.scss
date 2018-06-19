@@ -2,18 +2,18 @@
 
 // Icons
 @font-face {
-  font-family: 'icons';
-  src:  url('../assets/icons/icons.eot?57jv0f');
-  src:  url('../assets/icons/icons.eot?57jv0f#iefix') format('embedded-opentype'),
-  url('../assets/icons/icons.ttf?57jv0f') format('truetype'),
-  url('../assets/icons/icons.woff?57jv0f') format('woff'),
-  url('../assets/icons/icons.svg?57jv0f#icomoon') format('svg');
+  font-family: icons;
+  src: url('../assets/icons/icons.eot?57jv0f');
+  src: url('../assets/icons/icons.eot?57jv0f#iefix') format('embedded-opentype'),
+    url('../assets/icons/icons.ttf?57jv0f') format('truetype'),
+    url('../assets/icons/icons.woff?57jv0f') format('woff'),
+    url('../assets/icons/icons.svg?57jv0f#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icons' !important;
+[class^='icon-'], [class*=' icon-'] {
+  font-family: icons !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -25,64 +25,78 @@
 }
 
 .icon-align-left:before {
-  content: "\e900";
+  content: '\e900';
   color: #6a6a6a;
 }
+
 .icon-align-right:before {
-  content: "\e901";
+  content: '\e901';
   color: #6a6a6a;
 }
+
 .icon-align-v-bottom:before {
-  content: "\e902";
+  content: '\e902';
   color: #6a6a6a;
 }
+
 .icon-align-v-center:before {
-  content: "\e903";
+  content: '\e903';
   color: #6a6a6a;
 }
+
 .icon-align-v-middle:before {
-  content: "\e904";
+  content: '\e904';
   color: #6a6a6a;
 }
+
 .icon-align-v-top:before {
-  content: "\e905";
+  content: '\e905';
   color: #6a6a6a;
 }
+
 .icon-collapse:before {
-  content: "\e906";
+  content: '\e906';
   color: #707070;
 }
+
 .icon-move-to-back:before {
-  content: "\e907";
+  content: '\e907';
   color: #6a6a6a;
 }
+
 .icon-move-to-front:before {
-  content: "\e908";
+  content: '\e908';
   color: #6a6a6a;
 }
+
 .icon-padding-expand:before {
-  content: "\e909";
+  content: '\e909';
   color: #5e5e5e;
 }
+
 .icon-plus:before {
-  content: "\e90a";
+  content: '\e90a';
   color: #a6a6a6;
 }
+
 .icon-radius-expand:before {
-  content: "\e90b";
+  content: '\e90b';
   color: #5e5e5e;
 }
+
 .icon-swap:before {
-  content: "\e90c";
+  content: '\e90c';
   color: #5e5e5e;
 }
+
 .icon-ticker:before {
-  content: "\e90d";
+  content: '\e90d';
   color: #fff;
 }
+
 .icon-transform:before {
   margin-top: 4px;
   font-size: 17px;
-  content: "\e90e";
+  content: '\e90e';
   color: #d9d9d9;
 }
