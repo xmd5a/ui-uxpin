@@ -9,7 +9,7 @@ Recruitment task was made using:
 
 All source files are available in **src** directory
 
-##Running project
+## Running project
 If you want to run project in development mode please open terminal and insert this instructions:
 ```
 $ npm install
@@ -22,7 +22,7 @@ $ npm run build
 ```
 and then you'll have new **directory** named **dist** where all assets will be placed.
 
-##Modifying form
+## Modifying form
 There's several types of macros written in **twig** template which make form elements reusable.
 
 Here's full list of macros with available parameters:
