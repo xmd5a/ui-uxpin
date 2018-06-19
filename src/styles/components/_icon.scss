@@ -2,11 +2,11 @@
   cursor: pointer;
   position: relative;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 14px;
   font-size: 10px;
   color: $colorSilverChalice;
-  text-indent: -999px;
+  text-indent: -9999px;
 
   &:before {
     position: absolute;
@@ -29,5 +29,19 @@
   &--regular {
     width: 17px;
     height: 17px;
+  }
+
+  &--inline {
+    margin-top: 2px;
+
+    + fieldset {
+      margin-left: 5px;
+    }
+  }
+
+  &--no-hover {
+    &:hover {
+      background-color: transparent;
+    }
   }
 }

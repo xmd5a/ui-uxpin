@@ -12,11 +12,11 @@
     <div class="c-section__content active">
       <div class="c-section__content__row">
         {{ forms.inputSmallLabel("width", "width", "W", 500) }}
-        <fieldset class="c-fieldset">
-          <i class="c-icon c-icon--regular icon-swap"></i>
-        </fieldset>
+        <i class="c-icon c-icon--inline c-icon--regular c-icon--no-hover icon-swap"></i>
         {{ forms.inputSmallLabel("height", "height", "H", 500) }}
-        <i class="c-icon icon-transform"></i>
+        <div class="c-fieldset">
+          <i class="c-icon icon-transform c-icon--no-hover"></i>
+        </div>
       </div>
 
       <div class="c-section__content__row">
@@ -72,12 +72,19 @@
       Stroke
       <i class="c-icon c-section__headline-icon icon-plus">expand stroke</i>
     </h2>
-    <div class="c-section__content" data-section="stroke">
+    <div class="c-section__content active" data-section="stroke">
       <div class="c-section__content__row">
         {{ forms.checkboxAlignTop("stroke", "stroke", "", "checked") }}
         {{ forms.colorBox("pink") }}
         {{ forms.inputWithoutLabel("stroke_color", "fill_color", "23F071", "hex") }}
-        {{ forms.inputWithoutLabel("stroke_line", "stroke_line", "lajn", "stroke-select") }}
+        {#{{ forms.inputWithoutLabel("stroke_line", "stroke_line", "lajn", "stroke-select") }}#}
+        <select class="c-select c-select-line">
+          <option class="c-select-line__stroke">one</option>
+          <option>one</option>
+          <option>one</option>
+          <option>one</option>
+          <option>one</option>
+        </select>
         {{ forms.inputWithoutLabel("stroke_border", "stroke_border", "1", "", "u-40-width") }}
       </div>
     </div>

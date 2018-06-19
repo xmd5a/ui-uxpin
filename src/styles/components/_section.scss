@@ -13,14 +13,14 @@
     @include letterSpacing(100);
     text-transform: uppercase;
     color: $colorScorpion;
-
-    &:hover .c-icon {
-      background-color: $colorConcrete;
-    }
   }
 
   &__headline-icon {
     margin-left: auto;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   &__content {

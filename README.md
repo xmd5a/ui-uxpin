@@ -1,4 +1,12 @@
 # frontend-ui-dev-recruitment-task
 
-frontend-ui-dev-recruitment-task is a project created with Chisel. Please check out Chisel documentation at [https://www.getchisel.co/docs/](www.getchisel.co/docs/).
+Recruitment task was made using:
+* HTML5 + CSS3
+* Twig
+* Sass
+* a little bit of JavaScript
+* yeoman generator [chisel](https://github.com/xfiveco/generator-chisel)
+
+All source files are available in **src** directory.
+
 
