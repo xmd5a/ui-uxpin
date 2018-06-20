@@ -1,5 +1,8 @@
 {
   "extends": "chisel",
+  "rules": {
+    "no-param-reassign": ["error", { "props": false }],
+  },
   "overrides": [
     {
       "files": [
