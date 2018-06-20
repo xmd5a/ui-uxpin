@@ -15,7 +15,7 @@
       <div class="c-input c-input__{{ name }}" id="{{ id }}" class="{{ size }}">{{ value }}</div>
     </div>
   {% else %}
-    <input name="{{ name }}" id={{ id }} {% if size != "" %} class="{{ size }}" {% endif %} type="{{ type|default("text")
+    <input name="{{ name }}" id="{{ id }}" {% if size != "" %} class="{{ size }}" {% endif %} type="{{ type|default("text")
     }}" value="{{ value }}" />
   {% endif %}
 {% endmacro %}
@@ -79,7 +79,7 @@
 
   <fieldset class="c-fieldset c-fieldset--checkbox">
     <div class="c-fieldset__content c-checkbox">
-      <input name={{ name }} id="{{ id }}" type="checkbox" {{ checked }} />
+      <input name="{{ name }}" id="{{ id }}" type="checkbox" {{ checked }} />
       {{ forms.label(id, label) }}
     </div>
   </fieldset>
@@ -90,7 +90,7 @@
 
   <fieldset class="c-fieldset c-fieldset--checkbox">
     <div class="c-fieldset__content c-checkbox c-checkbox--align-top">
-      <input name={{ name }} id="{{ id }}" type="checkbox" {{ checked }} />
+      <input name="{{ name }}" id="{{ id }}" type="checkbox" {{ checked }} />
       {{ forms.label(id, label) }}
     </div>
   </fieldset>
