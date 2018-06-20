@@ -1,9 +1,15 @@
 .c-input-w-label {
   display: inline-block;
   margin-left: $marginBetweenInputs;
+  width: 100%;
 
   &:first-of-type {
     margin-left: 0;
+  }
+
+  .c-input {
+    display: flex;
+    align-items: center;
   }
 
   input {

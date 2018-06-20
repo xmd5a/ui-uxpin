@@ -1,0 +1,18 @@
+.c-input-select {
+  cursor: pointer;
+  position: relative;
+
+  &:before {
+    content: '';
+    right: 0;
+    bottom: 10px;
+    position: absolute;
+    width: 6px;
+    height: 3px;
+    background: url('../assets/icons/select-expand.svg') center no-repeat;
+  }
+
+  input {
+    cursor: pointer;
+  }
+}

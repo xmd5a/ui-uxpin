@@ -35,12 +35,12 @@
   <section class="o-section c-section c-section--space">
     <div class="c-section__content active">
       <div class="c-section__content__row" data-section="radius-short">
-        {{ forms.inputLabel("radius", "radius", "Radius", 0, "number") }}
+        {{ forms.inputLabel("radius", "radius", "Radius", 2, "number") }}
         <div class="c-fieldset">
           <i class="c-icon icon-radius-expand c-icon--bordered" data-hide="radius-short" data-show="radius-full"></i>
         </div>
       </div>
-      <div class="c-section__content__row" data-section="radius-full">
+      <div class="c-section__content__row hidden" data-section="radius-full">
         {{ forms.labelWithoutInput("Radius") }}
         {{ forms.inputWithBottomLabel("radius_tl", "radius_tl", "TL", 2, "number", "u-26-width") }}
         {{ forms.inputWithBottomLabel("radius_tr", "radius_tr", "TR", 2, "number", "u-26-width") }}
@@ -50,25 +50,25 @@
           <i class="c-icon icon-collapse c-icon--bordered" data-hide="radius-full" data-show="radius-short"></i>
         </div>
       </div>
-      <div class="c-section__content__row">
+      <div class="c-section__content__row" data-section="padding-short">
         {{ forms.inputLabel("padding", "padding", "Padding", 2, "number") }}
         <div class="c-fieldset">
-          <i class="c-icon icon-padding-expand c-icon--bordered"></i>
+          <i class="c-icon icon-padding-expand c-icon--bordered" data-hide="padding-short" data-show="padding-full"></i>
         </div>
       </div>
-      <div class="c-section__content__row">
-        {{ forms.labelWithoutInput("Radius") }}
-        {{ forms.inputWithBottomLabel("padding_left", "padding_left", "TL", 2, "number", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("padding_top", "padding_top", "TR", 2, "number", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("padding_right", "padding_right", "BR", 2, "number", "u-26-width") }}
-        {{ forms.inputWithBottomLabel("padding_bottom", "padding_bottom", "BL", 2, "number", "u-26-width") }}
+      <div class="c-section__content__row hidden" data-section="padding-full">
+        {{ forms.labelWithoutInput("Padding") }}
+        {{ forms.inputWithBottomLabel("padding_left", "padding_left", "left", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("padding_top", "padding_top", "Top", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("padding_right", "padding_right", "Right", 2, "number", "u-26-width") }}
+        {{ forms.inputWithBottomLabel("padding_bottom", "padding_bottom", "Left", 2, "number", "u-26-width") }}
         <div class="c-fieldset">
-          <i class="c-icon icon-collapse c-icon--bordered"></i>
+          <i class="c-icon icon-collapse c-icon--bordered" data-hide="padding-full" data-show="padding-short"></i>
         </div>
       </div>
       <div class="c-section__content__row">
         {{ forms.labelWithoutInput("Layer") }}
-        {{ forms.inputWithBottomLabel("blending", "blending", "Blending", "Normal", "select", "u-94-width") }}
+        {{ forms.select("blending", "blending", "blending", "Blending", "Normal", "u-94-width") }}
         {{ forms.inputWithBottomLabel("opacity", "opacity", "Opacity", "40%", "text", "u-40-width") }}
       </div>
     </div>
@@ -102,15 +102,8 @@
       <div class="c-section__content__row">
         {{ forms.checkboxAlignTop("stroke", "stroke", "", "checked") }}
         {{ forms.colorBox("pink") }}
-        {{ forms.inputWithoutLabel("stroke_color", "fill_color", "23F071", "hex") }}
-        {#{{ forms.inputWithoutLabel("stroke_line", "stroke_line", "lajn", "stroke-select") }}#}
-        <select class="c-select c-select-line">
-          <option class="c-select-line__stroke">one</option>
-          <option>one</option>
-          <option>one</option>
-          <option>one</option>
-          <option>one</option>
-        </select>
+        {{ forms.inputWithoutLabel("stroke_color", "stroke_color", "23F071", "hex") }}
+        {{ forms.select("stroke", "stroke", "stroke", "", "Normal", "u-40-width") }}
         {{ forms.inputWithoutLabel("stroke_border", "stroke_border", "1", "number", "u-40-width") }}
       </div>
     </div>

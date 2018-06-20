@@ -3,9 +3,16 @@
 {% endmacro %}
 
 {% macro input(name, id, value, type, size) %}
+  {%  import _self as forms %}
+
   {% if type == "hex" %}
     <div class="c-input-hex">
-      <input name="{{ name }}" id={{ id }} type="{{ type|default("text") }}" value="{{ value }}" />
+      {{  forms.input(name, id, value, "text", size) }}
+    </div>
+  {% elseif type == "select" %}
+    <div class="c-input-select">
+      {{  forms.input(name, id, value, "hidden", size) }}
+      <div class="c-input c-input__{{ name }}" id="{{ id }}" class="{{ size }}">{{ value }}</div>
     </div>
   {% else %}
     <input name="{{ name }}" id={{ id }} {% if size != "" %} class="{{ size }}" {% endif %} type="{{ type|default("text")
@@ -111,5 +118,37 @@
       <div class="c-color-box c-color-box--color-{{ color }}"></div>
       <label class="c-color-box__label">{{ label }}</label>
     </div>
+  </div>
+{% endmacro %}
+
+{% macro select(name, id, type, label, value, size) %}
+  {% import _self as forms %}
+
+  <div class="c-fieldset c-select-container">
+    {{ forms.inputWithBottomLabel(name, id, label, value, "select", size) }}
+    <ul class="c-select c-select__{{ name }}">
+      {% if name == "blending" %}
+        <li data-value="Normal">Normal</li>
+        <li data-value="Color">Color</li>
+        <li data-value="Color-Burn">Color-Burn</li>
+        <li data-value="Color-Dodge">Color-Dodge</li>
+        <li data-value="Darken">Darken</li>
+        <li data-value="Difference">Difference</li>
+        <li data-value="Exclusion">Exclusion</li>
+        <li data-value="Hard-Light">Hard-Light</li>
+        <li data-value="Hue">Hue</li>
+        <li data-value="Lighten">Lighten</li>
+        <li data-value="Luminosity">Luminosity</li>
+        <li data-value="Multiply">Multiply</li>
+        <li data-value="Overlay">Overlay</li>
+        <li data-value="Saturation">Saturation</li>
+        <li data-value="Screen">Screen</li>
+        <li data-value="Soft-Light">Soft-Light</li>
+      {% elseif name == "stroke" %}
+        <li data-class="line">Line</li>
+        <li data-class="line-wide-dashed">Line wide dashed</li>
+        <li data-class="line-dashed">line dashed</li>
+      {% endif %}
+    </ul>
   </div>
 {% endmacro %}

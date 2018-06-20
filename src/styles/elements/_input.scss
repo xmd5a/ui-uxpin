@@ -1,4 +1,8 @@
 input {
+  @extend .default-input-style;
+}
+
+.default-input-style {
   box-sizing: border-box;
   height: 22px;
   font-size: $globalFontSize;
@@ -11,9 +15,14 @@ input {
     outline: none;
   }
 
+  &[type='number']{
+    -moz-appearance: textfield;
+  }
+
   &[type='number']::-webkit-inner-spin-button,
   &[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
+    appearance: none;
     margin: 0;
   }
 }

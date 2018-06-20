@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 3.563">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(0,0,0,0.4);
+      }
+    </style>
+  </defs>
+  <path id="np_chevron-down_730206_000000" class="cls-1" d="M1.5,22.368,0,20.868.563,20.3,3,22.745l2.437-2.437L6,20.868l-3,3Z" transform="translate(0 -20.304)"/>
+</svg>

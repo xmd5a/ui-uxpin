@@ -37,6 +37,10 @@
 
     &__row {
       display: flex;
+
+      &.hidden {
+        display: none;
+      }
     }
 
     > div + div {

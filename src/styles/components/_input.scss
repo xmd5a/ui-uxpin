@@ -1,0 +1,24 @@
+.c-input {
+  @extend .default-input-style;
+
+  &__stroke {
+    background: url('../assets/icons/stroke-line.svg') center no-repeat $colorWhite;
+    background-size: 26px 2px;
+    text-indent: -9999px;
+
+    &.line {
+      background: url('../assets/icons/stroke-line.svg') center no-repeat $colorWhite;
+      background-size: 26px 2px;
+    }
+
+    &.line-wide-dashed {
+      background: url('../assets/icons/stroke-dashed-wider.svg') no-repeat center $colorWhite;
+      background-size: 26px 2px;
+    }
+
+    &.line-dashed {
+      background: url('../assets/icons/stroke-dashed.svg') no-repeat center $colorWhite;
+      background-size: 26px 2px;
+    }
+  }
+}

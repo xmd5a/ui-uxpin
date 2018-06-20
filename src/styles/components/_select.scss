@@ -1,0 +1,53 @@
+.c-select {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  display: none;
+  color: $colorScorpion;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+
+  &.active {
+    display: block;
+  }
+
+  li {
+    width: 80px;
+    cursor: pointer;
+    padding: 6px 20px;
+    background-color: $colorWhite;
+    transition: background-color $default-anim-time;
+
+    &:hover {
+      background-color: $colorConcrete;
+    }
+
+    &.active {
+      background-color: $colorConcrete;
+    }
+  }
+
+  &__stroke {
+    li {
+      text-indent: -9999px;
+
+      &:nth-child(1) {
+        background: url('../assets/icons/stroke-line.svg') center no-repeat $colorWhite;
+        background-size: 26px 2px;
+      }
+
+      &:nth-child(2) {
+        background: url('../assets/icons/stroke-dashed-wider.svg') no-repeat center $colorWhite;
+        background-size: 26px 2px;
+      }
+
+      &:nth-child(3) {
+        background: url('../assets/icons/stroke-dashed.svg') no-repeat center $colorWhite;
+        background-size: 26px 2px;
+      }
+
+      &:hover {
+        background-color: $colorConcrete;
+      }
+    }
+  }
+}
